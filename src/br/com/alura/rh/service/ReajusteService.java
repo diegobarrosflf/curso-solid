@@ -8,20 +8,20 @@ import java.util.List;
 
 public class ReajusteService {
 
-    //List<ValidacaoReajuste> validacoes;
+    List<ValidacaoReajuste> validacoes;
 
-    /*public ReajusteService(List<ValidacaoReajuste> validacoes) {
+    public ReajusteService(List<ValidacaoReajuste> validacoes) {
         this.validacoes = validacoes;
-    }*/
+    }
 
     public void reajustarSalarioDoFuncionário(Funcionario funcionario, BigDecimal aumento){
-        //this.validacoes.forEach(v -> v.validar(funcionario, aumento));
+        this.validacoes.forEach(v -> v.validar(funcionario, aumento));
         //Implementação com acoplamento concreto
-        ValidacaoPercentualReajuste validacaoPercentualReajuste = new ValidacaoPercentualReajuste();
+        /*ValidacaoPercentualReajuste validacaoPercentualReajuste = new ValidacaoPercentualReajuste();
         validacaoPercentualReajuste.validar(funcionario, aumento);
 
         ValidacaoPeriocidadelReajuste validacaoPeriocidadelReajuste = new ValidacaoPeriocidadelReajuste();
-        validacaoPeriocidadelReajuste.validar(funcionario, aumento);
+        validacaoPeriocidadelReajuste.validar(funcionario, aumento);*/
         /*
         Veja que sempre uma nova classe que implementa uma nova regra surgir é preciso alterar a classe de serviço
         pois a classe de serviço depende de classes concretas. Ao utilizarmos a Lista de ValidacaoReajustes implementamos a
