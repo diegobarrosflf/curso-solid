@@ -28,7 +28,6 @@ public class ReajusteService {
         inverção de controle, onde a classe de serviço depende uma abstração e não de um implementação concreta.
         * */
 
-
         BigDecimal salarioReajustado = funcionario.getSalario().add(aumento);
         funcionario.atualizarSalario(salarioReajustado);
     }
