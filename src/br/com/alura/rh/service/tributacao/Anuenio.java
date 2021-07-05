@@ -22,10 +22,5 @@ public class Anuenio implements Reajuste{
     public LocalDate data() {
         return data;
     }
-    //Anuenio e isento de imposto de renda e agora?
 
-    @Override
-    public BigDecimal impostoDeRenda() {
-        return BigDecimal.ZERO;//Faz sentido devolver zero?
-    }
 }
